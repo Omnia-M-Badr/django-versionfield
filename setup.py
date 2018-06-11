@@ -19,7 +19,6 @@ setup(
     packages=find_packages(),
     include_package_data=True,
     install_requires=[
-        'Django<=1.10.99',
         'six>=1.9.0',
     ],
     classifiers=[
