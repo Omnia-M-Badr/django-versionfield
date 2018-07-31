@@ -60,3 +60,19 @@ class Version(object):
         if isinstance(other, six.string_types):
             other = Version(other, self.number_bits)
         return int(self) >= int(other)
+
+    # Added Add + and Subtract - so 1.0.1 + 2.0.1 = 3.0.2 etc. Subtracting is max of 0.0.0
+    def __add__(self, other):
+        if not other:
+            return self
+        if isinstance(other, six.string_types):
+            other = Version(other, self.number_bits)
+        return Version(convert_version_int_to_string(int(self) + int(other), self.number_bits), self.number_bits)
+
+
+    def __sub__(self, other):
+        if not other:
+            return self
+        if isinstance(other, six.string_types):
+            other = Version(other, self.number_bits)
+        return Version(convert_version_int_to_string(max(int(self) - int(other), 0), self.number_bits), self.number_bits)
