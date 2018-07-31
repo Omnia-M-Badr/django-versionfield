@@ -1,13 +1,13 @@
 import six
 
 from django.utils.encoding import python_2_unicode_compatible
-
+from .constants import DEFAULT_NUMBER_BITS
 from .utils import convert_version_string_to_int, convert_version_int_to_string
 
 
 @python_2_unicode_compatible
 class Version(object):
-    def __init__(self, string, number_bits):
+    def __init__(self, string, number_bits=DEFAULT_NUMBER_BITS):
         """
         Take in a verison string e.g. '3.0.1'
         Store it as a converted int
