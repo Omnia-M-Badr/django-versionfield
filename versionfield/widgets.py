@@ -19,8 +19,6 @@ class VersionWidget(TextInput):
 
         # Get Attrs and set as read-only and reduce size
         attrs = attrs or {}
-        if DISABLE_WIDGET_INPUT:
-            attrs['readonly'] = True
         if 'size' not in attrs:
             attrs['size'] = DEFAULT_INPUT_SIZE
         if value is None:
