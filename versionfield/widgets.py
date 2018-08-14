@@ -1,7 +1,7 @@
 from django.forms.widgets import TextInput
 from django.template.loader import render_to_string
 
-from .constants import DEFAULT_INPUT_SIZE, DEFAULT_VERSION_VALUE, DISABLE_WIDGET_INPUT
+from .constants import DEFAULT_INPUT_SIZE, DEFAULT_VERSION_VALUE
 
 
 class VersionWidget(TextInput):
