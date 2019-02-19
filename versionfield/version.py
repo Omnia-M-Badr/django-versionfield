@@ -33,6 +33,9 @@ class Version(object):
             other = Version(other, self.number_bits)
         return int(self) == int(other)
 
+    def __hash__(self):
+        return int(self)
+
     def __lt__(self, other):
         if not other:
             return False
