@@ -1,8 +1,8 @@
 django-versionfield
 ====
 
-[![Build Status](https://travis-ci.org/lerooze/django-versionfield.svg?branch=django3)](https://travis-ci.org/lerooze/django-versionfield)
-<!-- [![codecov](https://codecov.io/gh/tonioo/django-versionfield/branch/master/graph/badge.svg)](https://codecov.io/gh/tonioo/django-versionfield) -->
+[![Build Status](https://travis-ci.org/tonioo/django-versionfield.svg?branch=master)](https://travis-ci.org/tonioo/django-versionfield)
+[![codecov](https://codecov.io/gh/tonioo/django-versionfield/branch/master/graph/badge.svg)](https://codecov.io/gh/tonioo/django-versionfield)
 
 Usage:
     from versionfield import VersionField
