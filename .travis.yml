@@ -9,7 +9,6 @@ before_install:
 
 install:
   - pipenv install --dev
-  - pipenv shell
 
 script:
   - cd test_project
