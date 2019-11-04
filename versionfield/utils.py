@@ -11,6 +11,9 @@ def convert_version_string_to_int(string, number_bits):
     >>> convert_version_string_to_int('3.0.1',[8,8,16])
     50331649
     """
+    # This is needed for using Version as a type in pydantic
+    if string == Ellipsis: return string
+        
     numbers = [int(number_string) for number_string in string.split(".")]
 
     if len(numbers) > len(number_bits):
