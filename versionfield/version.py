@@ -25,6 +25,8 @@ class Version(object):
     def __eq__(self, other):
         if not other:
             return False  # we are obviously a valid Version, but 'other' isn't
+        if other == Ellipsis:
+            return False # For pydantic use
         if isinstance(other, str):
             other = Version(other, self.number_bits)
         return int(self) == int(other)
