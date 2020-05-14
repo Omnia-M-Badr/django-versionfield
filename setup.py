@@ -18,9 +18,7 @@ setup(
     author_email='tonio@ngyn.org',
     packages=find_packages(),
     include_package_data=True,
-    install_requires=[
-        'six>=1.9.0',
-    ],
+    install_requires=[],
     classifiers=[
         'Development Status :: 3 - Alpha',
         'Framework :: Django',

@@ -25,7 +25,7 @@ class VersionWidget(TextInput):
             value = DEFAULT_VERSION_VALUE
 
         # Get the default input html (as read-only text input field)
-        input_html = super(VersionWidget, self).render(name, value, attrs=attrs, **kwargs)
+        input_html = super().render(name, value, attrs=attrs, **kwargs)
 
         # Render the Version Input widget
         rendered = render_to_string(

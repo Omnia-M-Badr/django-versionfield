@@ -1,7 +1,5 @@
 """Custom form fields."""
 
-import six
-
 from django import forms
 
 from .version import Version
@@ -51,7 +49,7 @@ class VersionField(forms.CharField):
 
         self.check_format(value)
 
-        if isinstance(value, six.string_types):
+        if isinstance(value, str):
             return Version(value, self.number_bits)
 
         return Version(
