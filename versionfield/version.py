@@ -9,8 +9,7 @@ class Version(object):
         Store it as a converted int
         """
         self.number_bits = number_bits
-        self.internal_integer = convert_version_string_to_int(
-            string, number_bits)
+        self.internal_integer = convert_version_string_to_int(string, number_bits)
 
     def __str__(self):
         return str(convert_version_int_to_string(

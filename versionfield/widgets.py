@@ -11,7 +11,7 @@ class VersionWidget(TextInput):
             'all': ('django-versionfield/css/bootstrap.css',)
         }
         js = (
-            'django-versionfield/js/jquery-3.3.1.min.js',
+            'django-versionfield/js/jquery-3.5.1.min.js',
             'django-versionfield/js/bootstrap.min.js',
         )
 

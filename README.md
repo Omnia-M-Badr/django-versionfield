@@ -1,41 +1,41 @@
-django-versionfield
-====
+# django-versionfield
 
-[![Build Status](https://travis-ci.org/tonioo/django-versionfield.svg?branch=master)](https://travis-ci.org/tonioo/django-versionfield)
-[![codecov](https://codecov.io/gh/tonioo/django-versionfield/branch/master/graph/badge.svg)](https://codecov.io/gh/tonioo/django-versionfield)
+[![PyPI version](https://badge.fury.io/py/django-versionfield.svg)](https://badge.fury.io/py/django-versionfield)
+[![PyPi downloads](https://pypip.in/d/django-versionfield/badge.png)](https://crate.io/packages/django-versionfield/)
 
-Usage:
+## Installation
+   * Install `django-versionfield`
+```shell script
+  pip install django-versionfield
+```
+   * Add to `INSTALLED_APPS`
+```python
+    INSTALLED_APPS = [ 
+    ...
+    'versionfield',
+    ...    
+    ]   
+```
+    
+## Usage:
+```python
     from versionfield import VersionField
 
     class SomeModel(models.Model):
         version = VersionField()
+```
 
-Sample Queries:
+## Sample Queries:
+```python
     SomeModel.objects.filter(version__gt="1.0.0")
     SomeModel.objects.filter(version__gt="1.0")
-    
-License
--------
+```
 
-django-versionfield is distributed under a BSD-style license.
+## Widget
+```python
+    from versionfield.widgets import VersionWidget
+    
+    class SomeForm(ModelForm):
+        some_field = VersionField(widget = VersionWidget)
 
-    Copyright (c) 2014-2017 Antoine Nguyen <tonio@ngyn.org>
-    Copyright (c) 2011-2013 MindSnacks (http://mindsnacks.com/)
-        
-    Permission is hereby granted, free of charge, to any person obtaining a copy
-    of this software and associated documentation files (the "Software"), to deal
-    in the Software without restriction, including without limitation the rights
-    to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-    copies of the Software, and to permit persons to whom the Software is
-    furnished to do so, subject to the following conditions:
-    
-    The above copyright notice and this permission notice shall be included in
-    all copies or substantial portions of the Software.
-    
-    THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-    IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-    FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
-    AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-    LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
-    OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
-    THE SOFTWARE.
+```
