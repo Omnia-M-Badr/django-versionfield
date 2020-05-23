@@ -6,7 +6,7 @@
 ## Installation
    * Install `django-versionfield`
 ```shell script
-  pip install django-versionfield
+	pip install django-versionfield
 ```
    * Add to `INSTALLED_APPS`
 ```python
